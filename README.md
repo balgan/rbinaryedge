@@ -9,3 +9,7 @@ To use it you will need to go to https://app.binaryedge.io and register for an a
 After registering you can generate a token which can be used with this package.
 
 Feel free to send pull requests!
+
+#To Install
+
+devtools::install_github("balgan/rbinaryedge")
