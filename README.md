@@ -10,6 +10,6 @@ After registering you can generate a token which can be used with this package.
 
 Feel free to send pull requests!
 
-#To Install
+# To Install
 
 devtools::install_github("balgan/rbinaryedge")
