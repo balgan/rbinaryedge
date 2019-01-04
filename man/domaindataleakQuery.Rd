@@ -2,14 +2,17 @@
 % Please edit documentation in R/domaindataleakQuery.R
 \name{domaindataleakQuery}
 \alias{domaindataleakQuery}
+\alias{domain_data_leak_query}
 \title{Query dataleak database - domain}
 \usage{
-domaindataleakQuery(domain, auth_token)
+domaindataleakQuery(domain, auth_token = be_auth_token())
+
+domain_data_leak_query(domain, auth_token = be_auth_token())
 }
 \arguments{
 \item{domain}{target domain}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query dataleak database for domain

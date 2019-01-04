@@ -2,16 +2,19 @@
 % Please edit documentation in R/dnsQuery.R
 \name{dnsQuery}
 \alias{dnsQuery}
+\alias{dns_query}
 \title{Query DNS database}
 \usage{
-dnsQuery(domain, page, auth_token)
+dnsQuery(domain, page, auth_token = be_auth_token())
+
+dns_query(domain, page, auth_token = be_auth_token())
 }
 \arguments{
 \item{domain}{target domain}
 
 \item{page}{page number of query}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query dns database to get list dns information for a domain

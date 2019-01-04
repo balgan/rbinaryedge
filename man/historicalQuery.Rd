@@ -2,14 +2,17 @@
 % Please edit documentation in R/historicalQuery.R
 \name{historicalQuery}
 \alias{historicalQuery}
+\alias{historical_query}
 \title{Query host database}
 \usage{
-historicalQuery(ip, auth_token)
+historicalQuery(ip, auth_token = be_auth_token())
+
+historical_query(ip, auth_token = be_auth_token())
 }
 \arguments{
 \item{ip}{target IP address}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query historical endpoint to extract information on CIDR or IP

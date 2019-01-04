@@ -7,21 +7,27 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom data.table as.data.table
 #' @importFrom tidyr unnest
-#'
 #' @param ip target IP address
-#' @param auth_token authentication token for the API
+#' @param auth_token authentication token for the API. See [be_auth_token()]
 #' @export
+historicalQuery <- function(ip, auth_token = be_auth_token()) {
 
+  content_query <- httr::GET(
+    url = sprintf("https://api.binaryedge.io/v2/query/ip/historical/%s", ip),
+    httr::add_headers("X-Key" = auth_token),
+    httr::user_agent(.be_ua)
+  )
 
-historicalQuery <- function(ip, auth_token) {
+  httr::stop_for_status(content_query)
 
-  content_query <- GET(paste0("https://api.binaryedge.io/v2/query/ip/historical/",ip),add_headers("X-Key" = auth_token))
-  raise <- content(content_query, as="text", encoding = 'UTF-8')
+  raise <- httr::content(content_query, as = "text", encoding = "UTF-8")
 
-  fromJSON(raise, flatten = TRUE) %>%
-    as.data.table() %>%
+  jsonlite::fromJSON(raise, flatten = TRUE) %>%
+    data.table::as.data.table() %>%
     # unnest() %>%
-    replace(.=="NULL", NA)
-
+    replace(. == "NULL", NA)
 }
 
+#' @rdname historicalQuery
+#' @export
+historical_query <- historicalQuery

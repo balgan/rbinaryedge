@@ -2,16 +2,19 @@
 % Please edit documentation in R/imagesearchQuery.R
 \name{imagesearchQuery}
 \alias{imagesearchQuery}
+\alias{image_search_query}
 \title{Image Query search}
 \usage{
-imagesearchQuery(searchparameter, page, auth_token)
+imagesearchQuery(searchparameter, page, auth_token = be_auth_token())
+
+image_search_query(searchparameter, page, auth_token = be_auth_token())
 }
 \arguments{
 \item{searchparameter}{search parameter to use on query}
 
 \item{page}{page number of query}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query for search in images to look specific countries or terms

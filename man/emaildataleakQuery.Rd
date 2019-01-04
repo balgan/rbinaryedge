@@ -2,14 +2,17 @@
 % Please edit documentation in R/emaildataleakQuery.R
 \name{emaildataleakQuery}
 \alias{emaildataleakQuery}
+\alias{email_data_leak_query}
 \title{Query dataleak database - email}
 \usage{
-emaildataleakQuery(email, auth_token)
+emaildataleakQuery(email, auth_token = be_auth_token())
+
+email_data_leak_query(email, auth_token = be_auth_token())
 }
 \arguments{
 \item{email}{target email address}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query dataleak database for single email

@@ -2,14 +2,17 @@
 % Please edit documentation in R/historicaltorrentQuery.R
 \name{historicaltorrentQuery}
 \alias{historicaltorrentQuery}
+\alias{historical_torrent_query}
 \title{Query historical torrent}
 \usage{
-historicaltorrentQuery(ip, auth_token)
+historicaltorrentQuery(ip, auth_token = be_auth_token())
+
+historical_torrent_query(ip, auth_token = be_auth_token())
 }
 \arguments{
 \item{ip}{target IP address}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query historical torrent  endpoint to extract information on IP
