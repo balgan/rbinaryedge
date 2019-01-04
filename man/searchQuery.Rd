@@ -2,16 +2,19 @@
 % Please edit documentation in R/searchQuery.R
 \name{searchQuery}
 \alias{searchQuery}
+\alias{search_query}
 \title{Query search}
 \usage{
-searchQuery(searchparameter, page, auth_token)
+searchQuery(searchparameter, page, auth_token = be_auth_token())
+
+search_query(searchparameter, page, auth_token = be_auth_token())
 }
 \arguments{
 \item{searchparameter}{search parameter to use on query}
 
 \item{page}{page number of query}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query for search to look for products or specific countries

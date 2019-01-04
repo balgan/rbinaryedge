@@ -2,16 +2,19 @@
 % Please edit documentation in R/dnsipQuery.R
 \name{dnsipQuery}
 \alias{dnsipQuery}
+\alias{dns_ip_query}
 \title{Query DNS database - IP}
 \usage{
-dnsipQuery(ip, page, auth_token)
+dnsipQuery(ip, page, auth_token = be_auth_token())
+
+dns_ip_query(ip, page, auth_token = be_auth_token())
 }
 \arguments{
 \item{ip}{target ip}
 
 \item{page}{page number of query}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query dns database to get list dns information for a IP

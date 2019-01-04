@@ -2,16 +2,19 @@
 % Please edit documentation in R/imageQuery.R
 \name{imageQuery}
 \alias{imageQuery}
+\alias{image_query}
 \title{Query image IP}
 \usage{
-imageQuery(ip, page, auth_token)
+imageQuery(ip, page, auth_token = be_auth_token())
+
+image_query(ip, page, auth_token = be_auth_token())
 }
 \arguments{
 \item{ip}{target ip address}
 
 \item{page}{page number of query}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query to get details of an image in an IP address

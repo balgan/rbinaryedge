@@ -2,14 +2,17 @@
 % Please edit documentation in R/torrentQuery.R
 \name{torrentQuery}
 \alias{torrentQuery}
+\alias{torrent_query}
 \title{Query torrent database}
 \usage{
-torrentQuery(ip, auth_token)
+torrentQuery(ip, auth_token = be_auth_token())
+
+torrent_query(ip, auth_token = be_auth_token())
 }
 \arguments{
 \item{ip}{target IP address}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query torrent database to extract information on CIDR or IP that downloaded torrents

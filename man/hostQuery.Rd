@@ -2,14 +2,17 @@
 % Please edit documentation in R/hostQuery.R
 \name{hostQuery}
 \alias{hostQuery}
+\alias{host_query}
 \title{Query host database}
 \usage{
-hostQuery(ip, auth_token)
+hostQuery(ip, auth_token = be_auth_token())
+
+host_query(ip, auth_token = be_auth_token())
 }
 \arguments{
 \item{ip}{target IP address}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query host database to extract information on CIDR or IP

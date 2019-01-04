@@ -2,14 +2,17 @@
 % Please edit documentation in R/riskscoreIP.R
 \name{riskscoreQuery}
 \alias{riskscoreQuery}
+\alias{risk_score_query}
 \title{Query Score for IP}
 \usage{
-riskscoreQuery(ip, auth_token)
+riskscoreQuery(ip, auth_token = be_auth_token())
+
+risk_score_query(ip, auth_token = be_auth_token())
 }
 \arguments{
 \item{ip}{target IP address}
 
-\item{auth_token}{authentication token for the API}
+\item{auth_token}{authentication token for the API. See \code{\link[=be_auth_token]{be_auth_token()}}}
 }
 \description{
 Query risk score for ip address
